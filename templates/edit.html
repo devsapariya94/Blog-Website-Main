@@ -1,0 +1,77 @@
+{% extends "layout.html" %}  
+
+
+{% block body %}
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(' {{ url_for('static',filename='img/home-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Learner Blog</h1>
+            <span class="subheading">A Blog by Learner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+       
+      
+<h1> EDIT POSTS</h1>
+          
+<form name="sentMessage" id="contactForm" action="/edit/{{srno}}" method="POST"  enctype="multipart/form-data" >
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls">
+      <label>Title</label>
+      <input type="text" class="form-control" placeholder="title" id="titel" name='titel' value="{{post.titel}}" required data-validation-required-message="Please enter title" >
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls">
+      <label>Subtitle</label>
+      <input type="text" class="form-control" placeholder="subtitle" id="subtitel" name='subtitel' value="{{post.subtitel}}"required data-validation-required-message="Please enter your subtitle" >
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-group col-xs-12 floating-label-form-group controls">
+      <label>slug</label>
+      <input type="text" class="form-control" placeholder="slug" id="slug" name='slug'value="{{post.slug}}" required data-validation-required-message="Please enter slug"  >
+
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-group floating-label-form-group controls">
+      <label>content</label>
+      <textarea rows="5" class="form-control" placeholder="content" id="content" name='content'  required data-validation-required-message="Please enter Content">{{post.content}}</textarea>
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="form-group col-xs-12 floating-label-form-group controls">
+      <label>Img File</label>
+      <input type="text" class="form-control" placeholder="img file" id="img_file" name='img_file' value="{{post.img_file}}"required data-validation-required-message="Please enter valid img name" >
+      <p class="help-block text-danger"></p>
+    </div>
+  </div>
+  {% if srno |int == 0 %} 
+  <h1>  UPLOAD IMG </h1>
+  <input type="file" name="file1">
+<hr>
+{%endif%}
+  <br>
+  <div id="success"></div>
+  <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+</form>
+
+
+  {% endblock %}

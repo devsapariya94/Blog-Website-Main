@@ -1,0 +1,18 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "gmail-user":"devprograming94@gmail.com",
+    "gmail-password":"PIP_Insatll9",
+    "fb_url":"https://facebook.com",
+    "gh_url":"https://github.com/devsapariya94",
+    "no_of_post":2,
+    "login_img":"login.svg",
+    "admin_user":"Dev",
+    "admin_pass":"devs",
+    "upload_location":"C:\\Users\\Admin\\Desktop\\.py file\\FLASK\\static\\img",
+    "heading":"Learner Blog",
+    "subheading":"Stay curious",
+    "about":"This blog is for learner how want tho learn new things. So serf the site and lean new!!....STAY CURIOUS"
+  }
+}
