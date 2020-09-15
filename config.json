@@ -2,8 +2,8 @@
   "params":
   {
     "local_server":"True",
-    "gmail-user":"devprograming94@gmail.com",
-    "gmail-password":"PIP_Insatll9",
+    "gmail-user":"your email",
+    "gmail-password":"password",
     "fb_url":"https://facebook.com",
     "gh_url":"https://github.com/devsapariya94",
     "no_of_post":2,
