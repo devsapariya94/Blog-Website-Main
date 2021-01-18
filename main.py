@@ -17,7 +17,7 @@ with open('config.json', 'r') as c:
 local_server = True
 app=Flask(__name__)
 app.secret_key='super-secret-key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:942003@localhost/site'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:pass@localhost/site'
 
 app.config['UPLOAD_FOLDER']= params['upload_location']
 
