@@ -152,7 +152,7 @@ def edit(srno):
                 post=Posts(titel=titel, subtitel=subtitel, slug=slug, content=content, img_file=img_file,date=date, author=params['admin_user'])
                 db.session.add(post)
                 db.session.commit()
-                mydb=mysql.connector.connect(host='localhost', user='root' , password='942003', db='site', auth_plugin='mysql_native_password')
+                mydb=mysql.connector.connect(host='localhost', user='root' , password='password', db='site', auth_plugin='mysql_native_password')
                 mycur=mydb.cursor()
                 cmd="select * from subscribe"
                 mycur.execute(cmd)
